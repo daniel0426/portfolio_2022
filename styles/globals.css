@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
 
+@font-face {
+  font-family: 'MACHINE';
+  src: url("../assets/Font/MACHINE.otf");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+}
+
+@layer base {
+  body {
+    @apply bg-[#141414] text-white font-montserrat
+  }
 }
 
 @layer components {
