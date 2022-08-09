@@ -1,5 +1,6 @@
+import React from 'react';
 import Link from 'next/link';
-import React, { useState } from 'react';
+
 import {
   DocumentTextIcon,
   MoonIcon,
@@ -9,9 +10,8 @@ import {
 } from '@heroicons/react/outline';
 import Image from 'next/image';
 import { ImLinkedin, ImGithub } from 'react-icons/im';
-function Header() {
-  const [isNavOpen, setIsNavOpen] = useState(undefined);
 
+function Header() {
   const MobileMenuOpenHandler = () => {
     document.body.classList.add('is-nav-open');
   };
@@ -19,10 +19,9 @@ function Header() {
   const MobileMenuCloseHandler = () => {
     document.body.classList.remove('is-nav-open');
   };
-  console.log(isNavOpen);
 
   return (
-    <header>
+    <header className="bg-gradient">
       <Link href="/">
         <Image
           src="/logo.png"
@@ -38,7 +37,7 @@ function Header() {
       />
       <nav className="nav transition-all">
         <XCircleIcon
-          className="nav-close-btn w-11 h-11 text-purple"
+          className="nav-close-btn w-11 h-11 text-purple hover:text-white transition"
           onClick={MobileMenuCloseHandler}
         />
         <ul className="space-x-4 ">
