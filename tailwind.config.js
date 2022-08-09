@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         machine: ['MACHINE'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
       },
     },
   },

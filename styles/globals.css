@@ -9,28 +9,101 @@
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+  font-family: 'Nunito';
+  src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
 }
+
 
 @layer base {
   body {
-    @apply bg-background text-white font-montserrat !scrollbar-thin  !scrollbar-track-transparent !scrollbar-thumb-purple  
+    @apply bg-background text-white font-nunito !scrollbar-thin  !scrollbar-track-transparent !scrollbar-thumb-purple  
   }
 
+  
+
   header {
-    @apply   fixed top-0 text-purple z-50 flex w-full items-center justify-between px-6 md:px-16  py-2 transition-all lg:py-2 
+    @apply  fixed top-0 text-purple z-40 flex w-full h-[8rem] items-center justify-between px-8 md:px-16  py-2 transition-all lg:py-2 
   }
 
   footer {
-    @apply text-white px-6 md:px-16 py-4
+    @apply text-white px-2 sm:px-6 md:px-16 pb-6 sm:py-4 
   }
 }
 
 
 
 @layer components {
-  
+
+}
+
+.nav-close-btn {
+  position: absolute;
+  top: 2.5rem;
+  right: 1.5rem;
+  display: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 0;
+  cursor:pointer;
+}
+
+.nav {
+  display : flex;
+  align-items : center
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
 
 
+@media screen and (max-width: 768px){
+  body.is-nav-open .nav-open-btn{
+    opacity :0
+  }
+  body.is-nav-open .nav {
+    transition: all 0.75s cubic-bezier(0.86, 0, 0.07, 1);
+    transform: translate3d(0, 0, 0);
+    background-color :#0D0F17;
+    opacity: 100;
+  }
+
+  body.is-nav-open ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  body.is-nav-open ul li {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    color: #F6F5FF;
+    transition: all 0.25s ease;
+  }
+  body.is-nav-open ul li:hover {
+    color : #682ae9;
+  } 
+  body.is-nav-open .theme-btn {
+    display:none;
+  }
+
+  .nav {
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    opacity:0;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    padding: 8rem 2.5rem 4rem;
+    text-align: right;
+    transform: translate3d(120%, 0, 0);
+  }
+  
+  .nav-close-btn {
+    display:flex
+  }
+}

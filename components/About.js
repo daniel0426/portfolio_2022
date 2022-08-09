@@ -1,7 +1,14 @@
 import React from 'react';
 
 function About() {
-  return <section></section>;
+  return (
+    <section>
+      <div>
+        <h1>About</h1>
+        <div></div>
+      </div>
+    </section>
+  );
 }
 
 export default About;

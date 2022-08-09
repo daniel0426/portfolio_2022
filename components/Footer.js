@@ -6,20 +6,22 @@ import { HiOutlineMail } from 'react-icons/hi';
 function Footer() {
   return (
     <footer>
-      <div className=" flex items-center sm:flex-row flex-col">
-        <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-          <Image
-            src="/logo.png"
-            alt="logo"
-            width={60}
-            height={50}
-            className="obejct-contain cursor-pointer w-3/4 md:w-full "
-          />
-        </a>
-        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-          © 2022 Made with Love by Daniel
-        </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
+      <div className=" flex items-center sm:flex-row flex-col mb-4">
+        <div className="flex items-center ">
+          <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={60}
+              height={50}
+              className="obejct-contain cursor-pointer w-3/4 md:w-full "
+            />
+          </a>
+          <p className="text-sm text-gray-500 ml-4 pl-4 border-l-2 border-gray-200 py-2 ">
+            © Handcrafted by me @twentytwentytwo
+          </p>
+        </div>
+        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4   items-center ">
           <a
             href="https://www.linkedin.com/in/daniel-chung-0426/"
             target="_blank"
@@ -27,7 +29,7 @@ function Footer() {
             title="linkedin"
             className="ml-3"
           >
-            <ImLinkedin className="w-6 h-6 text-mint" />
+            <ImLinkedin className="w-6 h-6 text-mint " />
           </a>
           <a
             href="https://github.com/daniel0426"
