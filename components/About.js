@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Skills from './Skills';
 
 function About() {
   return (
@@ -18,8 +19,9 @@ function About() {
             growth in my craft.
           </p>
           <p>
-            beyond frontend realm , i want to learn how to show data effectively
-            to users and write backend logic to handle massive traffic
+            beyond front-end development, i eager to learn how to show data
+            effectively to users and write backend logic to handle massive
+            traffic
           </p>
         </div>
         <div className="w-3/4 md:w-1/2 flex flex-col justify-center mx-auto md:mx-0">
@@ -27,7 +29,7 @@ function About() {
             <div className="relative bottom-6 md:bottom-4 right-4 md:right-2 h-6 text-6xl text-[92px] text-left text-purple">
               “
             </div>
-            <p className="mb-6 text-center">your attitude</p>
+            <p className="mb-2 md:mb-6 text-center">your attitude</p>
             <p className="text-center">determines your altitude</p>
             <div className="relative left-4 md:left-2 h-3 text-6xl text-[92px] text-right text-purple">
               ”
@@ -42,6 +44,8 @@ function About() {
           />
         </div>
       </div>
+      <Skills />
+      <h2 className="section-title">about /</h2>
     </section>
   );
 }
