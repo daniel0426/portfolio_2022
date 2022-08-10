@@ -4,10 +4,10 @@ import Skills from './Skills';
 
 function About() {
   return (
-    <section className="container mx-auto flex flex-col py-12 ">
+    <section className="container mx-auto flex flex-col py-12 px-2">
       <h2 className="section-title">about</h2>
       <div className="flex flex-col md:flex-row justify-center ">
-        <div className="uppercase  mx-auto text-lg sm:text-lg md:text-[24px] leading-normal lg:leading-tight w-3/4 md:max-w-lg lg:max-w-xl mb-16 ">
+        <div className="uppercase  mx-auto text-lg sm:text-lg md:text-[20px] lg:text-[24px] leading-normal lg:leading-tight w-4/5  md:max-w-lg lg:max-w-xl mb-16 ">
           <p className="text-right">i am createive frontend </p>
           <p className="mb-4">
             developer based in new zealand. i use my passion and skills to
@@ -24,7 +24,7 @@ function About() {
             traffic
           </p>
         </div>
-        <div className="w-3/4 md:w-1/2 flex flex-col justify-center mx-auto md:mx-0">
+        <div className="w-4/5 md:w-1/2 flex flex-col justify-center mx-auto md:mx-0">
           <div className=" text-center mb-6 opacity-80 w-3/4 md:w-2/3 mx-auto uppercase text-xl lg:text-2xl">
             <div className="relative bottom-6 md:bottom-4 right-4 md:right-2 h-6 text-6xl text-[92px] text-left text-purple">
               “

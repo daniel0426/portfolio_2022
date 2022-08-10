@@ -4,8 +4,9 @@ import React from 'react';
 function Skills() {
   return (
     <section className="container md:mt-12 bg-white/95 w-[90%] lg:w-[85%] mx-auto py-12 rounded-lg  ">
-      <p className="text-xl sm:text-2xl font-light text-purple pb-12 text-center sm:text-left sm:ml-12 ">
-        Here are some technologies that <br /> I can make your idea into real{' '}
+      <p className="text-lg sm:text-2xl font-light text-purple pb-12  sm:text-left sm:ml-12 px-5">
+        <span className="text-4xl font-bold">Skills</span>
+        <br /> Let’s make your idea into real !
       </p>
       <div className="grid grid-cols-2 gap-y-[2rem] md:grid-cols-4">
         <div className="skill">

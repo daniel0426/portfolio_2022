@@ -30,7 +30,7 @@
 
 @layer components {
  .section-title {
-  @apply text-brightpurple before:content-['<'] before:mr-2 after:content-['>'] after:ml-2 text-4xl md:text-5xl my-12 ml-[2rem] md:ml-[3rem] 
+  @apply text-brightpurple before:content-['<'] before:mr-2 after:content-['>'] after:ml-2 text-4xl md:text-5xl my-12 sm:ml-0 px-5
  }
 
  .skill {
