@@ -33,13 +33,27 @@
 
 
 @layer components {
-
+ .section-title {
+  @apply text-brightpurple before:content-['<'] before:mr-2 after:content-['>'] after:ml-2 text-4xl md:text-5xl mb-12 ml-[2rem] md:ml-[3rem] 
+ }
 }
 
 @layer utilities {
   .bg-gradient {
     background-image : linear-gradient(180deg, #0D0F17 6rem,rgba(14,18,18,0) 100%)
   }
+}
+
+/* nav styling */
+.nav {
+  display : flex;
+  align-items : center
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
 
 .nav-close-btn {
@@ -54,16 +68,6 @@
   cursor:pointer;
 }
 
-.nav {
-  display : flex;
-  align-items : center
-}
-
-.nav ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
 
 
 @media screen and (max-width: 768px){

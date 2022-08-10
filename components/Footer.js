@@ -29,7 +29,7 @@ function Footer() {
             title="linkedin"
             className="ml-3"
           >
-            <ImLinkedin className="w-6 h-6 text-mint " />
+            <ImLinkedin className="w-6 h-6 text-mint hover:brightness-125 " />
           </a>
           <a
             href="https://github.com/daniel0426"
@@ -38,7 +38,7 @@ function Footer() {
             title="github"
             className="ml-3"
           >
-            <ImGithub className="w-6 h-6 text-mint" />
+            <ImGithub className="w-6 h-6 text-mint hover:brightness-125" />
           </a>
           <a
             href="mailto:devdaneil0426@gmail.com"
@@ -47,7 +47,7 @@ function Footer() {
             title="mail"
             className="ml-3"
           >
-            <HiOutlineMail className="w-8 h-8 text-mint" />
+            <HiOutlineMail className="w-8 h-8 text-mint hover:brightness-125" />
           </a>
         </span>
       </div>

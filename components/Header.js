@@ -53,7 +53,7 @@ function Header() {
           <li>
             <a href="" target="_blank" className="flex items-center">
               <span>CV</span>
-              <DocumentTextIcon className="w-12 h-13 ml-0.5 md:ml-0 md:w-5 md:h-5" />
+              <DocumentTextIcon className="w-12 h-13 ml-0.5 md:ml-0.3 md:w-5 md:h-5 " />
             </a>
           </li>
           <li>
