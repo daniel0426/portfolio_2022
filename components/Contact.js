@@ -10,14 +10,30 @@ function Contact() {
   } = useForm();
 
   const onSubmit = (data, e) => {
-    e.target.reset();
-    console.log(data);
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          e.target.reset();
+          //hot toast success
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        //hot toast failed
+      });
   };
 
   return (
     <section className="relative" id="contact">
       <div className="container md:px-5 py-24 mx-auto mb-24">
-        <div className="flex flex-col text-center mx-auto w-4/5 md:w-full mb-12">
+        <div className="flex flex-col text-center mx-auto w-4/5 md:w-full mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl  font-medium title-font mb-4 text-brightpurple">
             Send me a message !
           </h1>
@@ -32,9 +48,9 @@ function Contact() {
           className=" w-4/5 sm:w-2/3 lg:w-1/2 mx-auto "
         >
           <div className="flex flex-wrap -m-2">
-            <div className="md:pr-4 w-full md:w-[50%] mb-4 md:mb-0">
-              <div className="space-y-3">
-                <label htmlFor="name" className="leading-7 text-sm font-light ">
+            <div className="md:pr-6 w-full md:w-[50%] mb-4 md:mb-0">
+              <div className="group  space-y-3">
+                <label htmlFor="name" className="label">
                   Name
                 </label>
                 <input
@@ -52,12 +68,9 @@ function Contact() {
                 )}
               </div>
             </div>
-            <div className=" md:pl-4 w-full md:w-[50%] mb-4 md:mb-0">
-              <div className="relative space-y-3">
-                <label
-                  htmlFor="email"
-                  className="leading-7 text-sm font-light "
-                >
+            <div className=" md:pl-6 w-full md:w-[50%] mb-4 md:mb-0">
+              <div className="group space-y-3">
+                <label htmlFor="email" className="label">
                   Email
                 </label>
                 <input
@@ -77,11 +90,8 @@ function Contact() {
               </div>
             </div>
             <div className="w-full mt-6">
-              <div className="space-y-3">
-                <label
-                  htmlFor="message"
-                  className="leading-7 text-sm font-light"
-                >
+              <div className="group space-y-3">
+                <label htmlFor="message" className="label">
                   Message
                 </label>
                 <textarea

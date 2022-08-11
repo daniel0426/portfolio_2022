@@ -17,5 +17,10 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwind-scrollbar')],
+  variants: {
+    extend: {
+      background: ['autofill'],
+    },
+  },
+  plugins: [require('tailwind-scrollbar'), require('tailwindcss-autofill')],
 };

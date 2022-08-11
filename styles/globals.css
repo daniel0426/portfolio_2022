@@ -36,9 +36,13 @@
  .skill {
   @apply flex flex-col items-center space-y-4 transition text-center font-light md:text-lg
  }
+ 
+ .label {
+  @apply leading-7 text-sm font-light group-focus-within:text-brightpurple
+ }
 
  .input {
-   @apply w-full text-sm sm:text-lg bg-transparent font-light border border-l-0 border-r-0 border-t-0  border-b-white  focus:border-b-brightpurple  outline-none  pb-2 leading-6 transition-colors duration-200 ease-in-out  placeholder-white placeholder:font-light focus:placeholder-opacity-0
+   @apply w-full text-sm sm:text-lg bg-transparent font-light border border-l-0 border-r-0 border-t-0  border-b-white  focus:border-b-brightpurple  outline-none  pb-1 leading-6 transition-colors duration-200 ease-in-out  placeholder-white placeholder:font-light focus:placeholder-opacity-0 autofill:bg-transparent 
  }
 
  .warningMessage {
@@ -79,7 +83,16 @@
   cursor:pointer;
 }
 
+/* chrome autocomplete background fix */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #0D0F17 inset !important;
+  -webkit-text-fill-color: #F6F5FF !important;
+}
 
+input:focus label {
+  color: #6919FF
+}
 
 @media screen and (max-width: 768px){
   body.is-nav-open .nav-open-btn{
