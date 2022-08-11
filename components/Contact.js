@@ -1,19 +1,37 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast, { Toaster } from 'react-hot-toast';
+import Loader from './Loader';
 
 function Contact() {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = (data, e) => {
-    fetch('/api/contact', {
+  const toastSuccessStyle = {
+    background: 'white',
+    color: '#4bb543',
+    fontSize: '16px',
+    padding: '15px',
+    borderRadius: '9999px',
+    maxWidth: '1000px',
+  };
+
+  const toastErrorStyle = {
+    background: 'white',
+    color: '#f56565',
+    fontSize: '16px',
+    padding: '15px',
+    borderRadius: '9999px',
+    maxWidth: '1000px',
+  };
+  const onSubmit = async (data, e) => {
+    await fetch('/api/contact', {
       method: 'POST',
       headers: {
-        Accept: 'application/json, text/plain, */*',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
@@ -21,12 +39,19 @@ function Contact() {
       .then((res) => {
         if (res.status === 200) {
           e.target.reset();
-          //hot toast success
+          reset();
+          toast('Thank you, your message has been sent', {
+            duration: 3000,
+            style: toastSuccessStyle,
+          });
         }
       })
       .catch((err) => {
         console.log(err);
-        //hot toast failed
+        toast('Please try it again leter.', {
+          duration: 3000,
+          style: toastErrorStyle,
+        });
       });
   };
 
@@ -56,7 +81,7 @@ function Contact() {
                 <input
                   {...register('name', {
                     required: true,
-                    pattern: /^[a-zA-Z]+$/,
+                    pattern: /^[a-zA-Z0-9_ ]*$/,
                     maxLength: 50,
                   })}
                   type="text"
@@ -79,7 +104,7 @@ function Contact() {
                   {...register('email', {
                     required: true,
                     pattern: {
-                      value: /^\S+@\S+$/i,
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                     },
                   })}
                   className="input"
@@ -110,14 +135,16 @@ function Contact() {
             <div className="w-full mt-6 text-right">
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="inline mx-auto uppercase tracking-wider bg-brightpurple  text-white  border-[1px] border-brightpurple py-2 px-4 text-sm sm:py-2 sm:px-8 focus:outline-none transition-all sm:text-lg font-light mt-4"
               >
-                Shoot
+                {isSubmitting ? <Loader color="fill-white" /> : 'Shoot'}
               </button>
             </div>
           </div>
         </form>
       </div>
+      <Toaster className="absolute bottom-0" position="bottom-center" />
     </section>
   );
 }
