@@ -4,8 +4,11 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import Projects from '../components/Projects';
+import { getProjects } from '../lib/projects';
+import { projects } from '../db/data';
 
-export default function Home() {
+export default function Home({ projects }) {
   return (
     <div>
       <Head>
@@ -16,9 +19,16 @@ export default function Home() {
       <main className="  relative mt-24">
         <Hero />
         <About />
+        <Projects projects={projects} />
         <Contact />
         <Footer />
       </main>
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  return {
+    props: { projects },
+  };
+};

@@ -58,11 +58,11 @@ function Contact() {
   return (
     <section className="relative" id="contact">
       <div className="container md:px-5 py-24 mx-auto mb-24">
-        <div className="flex flex-col text-center mx-auto w-4/5 md:w-full mb-12 sm:mb-16">
+        <div className="flex flex-col text-left sm:text-center mx-auto w-4/5 md:w-full mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl  font-medium title-font mb-4 text-brightpurple">
             Send me a message !
           </h1>
-          <p className="leading-relaxed text-lg md:text-xl font-light text-center">
+          <p className="leading-relaxed text-[16px] md:text-xl font-light r">
             Got a question or proposal, or just want {''}
             <br className="hidden sm:flex" />
             to say hello ? Go ahead.
