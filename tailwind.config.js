@@ -8,6 +8,7 @@ module.exports = {
       background: '#0D0F17',
       white: '#F6F5FF',
       mint: '#5eead4',
+      error: '#f56565',
     },
     extend: {
       fontFamily: {
