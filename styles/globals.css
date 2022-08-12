@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply bg-background text-white font-nunito !scrollbar-thin  !scrollbar-track-transparent !scrollbar-thumb-purple  
+    @apply bg-background text-white font-nunito !scrollbar-thin  !scrollbar-track-transparent !scrollbar-thumb-purple scroll-smooth 
   }
 
   header {
@@ -38,11 +38,11 @@
  }
  
  .label {
-  @apply leading-7 text-sm font-light group-focus-within:text-brightpurple
+  @apply leading-7 text-sm font-light group-focus-within:text-brightpurple group-focus-within:brightness-125 
  }
 
  .input {
-   @apply w-full text-sm sm:text-lg bg-transparent font-light border border-l-0 border-r-0 border-t-0  border-b-white  focus:border-b-brightpurple  outline-none  pb-1 leading-6 transition-colors duration-200 ease-in-out  placeholder-white placeholder:font-light focus:placeholder-opacity-0 autofill:bg-transparent 
+   @apply w-full text-sm sm:text-lg bg-transparent font-light border border-l-0 border-r-0 border-t-0  border-b-white  focus:border-b-brightpurple focus:brightness-125  outline-none  pb-1 leading-6 transition-colors duration-200 ease-in-out  placeholder-white placeholder:font-light focus:placeholder-opacity-0 
  }
 
  .warningMessage {

@@ -28,6 +28,7 @@ function Contact() {
     borderRadius: '9999px',
     maxWidth: '1000px',
   };
+
   const onSubmit = async (data, e) => {
     await fetch('/api/contact', {
       method: 'POST',

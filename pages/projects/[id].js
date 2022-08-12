@@ -1,3 +1,12 @@
-const Project = () => {};
+import { useRouter } from 'next/router';
+import React from 'react';
 
-export default Project;
+const ProjectDetail = () => {
+  const router = useRouter();
+  const query = router.query;
+  const { title } = query;
+
+  return <div>{title}</div>;
+};
+
+export default ProjectDetail;
