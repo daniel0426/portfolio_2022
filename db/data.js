@@ -12,10 +12,8 @@ export const projects = [
       'Storybook',
     ],
     img: '/projects/aprogo.png',
-    url: [
-      { github: 'https://github.com/team-ProD/FE-MAIN' },
-      { website: 'https://apro-go.netlify.app' },
-    ],
+    githubUrl: 'https://github.com/team-ProD/FE-MAIN',
+    websiteUrl: 'https://apro-go.netlify.app',
   },
   {
     id: 2,
@@ -24,7 +22,8 @@ export const projects = [
     details: [],
     technologies: ['Gatsby', 'AWS'],
     img: '/projects/hipeak.png',
-    url: [{ github: undefined }, { website: 'https://hipeak.co.nz/' }],
+    githubUrl: null,
+    websiteUrl: 'https://hipeak.co.nz',
   },
   {
     id: 3,
@@ -33,10 +32,8 @@ export const projects = [
     details: [],
     technologies: ['Gatsby', 'AWS'],
     img: '/projects/caron.png',
-    url: [
-      { github: 'https://github.com/daniel0426/caron-automotive' },
-      { website: 'caron.co.nz' },
-    ],
+    githubUrl: 'https://github.com/daniel0426/caron-automotive',
+    websiteUrl: 'caron.co.nz',
   },
   {
     id: 4,
@@ -45,10 +42,8 @@ export const projects = [
     details: [],
     technologies: ['Next.js', 'Typescript', 'Stripe', 'Firebase'],
     img: '/projects/netclix.png',
-    url: [
-      { github: 'https://github.com/daniel0426/netflix-clone' },
-      { website: 'https://netclix.vercel.app/' },
-    ],
+    githubUrl: 'https://github.com/daniel0426/netflix-clone',
+    websiteUrl: 'https://netclix.vercel.app',
   },
   {
     id: 5,
@@ -57,9 +52,17 @@ export const projects = [
     details: [],
     technologies: ['React', 'Redux (saga / thunk )', 'Material UI'],
     img: '/projects/noted.png',
-    url: [
-      { github: 'https://github.com/daniel0426/noteApp-redux-reduxThunk' },
-      { website: 'https://noted-personal.netlify.app' },
-    ],
+    githubUrl: 'https://github.com/daniel0426/noteApp-redux-reduxThunk',
+    websiteUrl: 'https://noted-personal.netlify.app',
+  },
+  {
+    id: 6,
+    title: 'Cryptoworld',
+    description: 'Cryptocurrency information application',
+    details: [],
+    technologies: ['React', 'Redux (saga / thunk )', 'Material UI'],
+    img: '/projects/noted.png',
+    githubUrl: 'https://github.com/daniel0426/noteApp-redux-reduxThunk',
+    websiteUrl: 'https://noted-personal.netlify.app',
   },
 ];
