@@ -1,8 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
-import { BackspaceIcon, BookmarkIcon } from '@heroicons/react/outline';
+import { BackspaceIcon } from '@heroicons/react/outline';
 
 const ProjectDetail = () => {
   const router = useRouter();
@@ -58,7 +57,7 @@ const ProjectDetail = () => {
                 ))}
               </div>
             </div>
-            <div className="mt-8 flex gap-x-4 sm:gap-x-8 ">
+            <div className="mt-8 flex justify-center sm:justify-start gap-x-4 sm:gap-x-8 ">
               {githubUrl && (
                 <a
                   href={githubUrl}

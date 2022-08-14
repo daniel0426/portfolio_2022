@@ -5,7 +5,6 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
-import { getProjects } from '../lib/projects';
 import { projects } from '../db/data';
 
 export default function Home({ projects }) {

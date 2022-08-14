@@ -4,7 +4,7 @@ import React from 'react';
 function Skills() {
   return (
     <section className="container md:mt-12 bg-white/95 w-[90%] lg:w-[85%] mx-auto py-12 rounded-lg  ">
-      <p className="text-lg sm:text-2xl font-light text-purple pb-12  sm:text-left  sm:ml-6 px-5 sm:px-10">
+      <p className="text-lg sm:text-2xl font-light text-background pb-12 text-left sm:text-center  sm:ml-6 px-5 sm:px-10">
         <span className="text-3xl font-bold">Skills</span>
         <br /> Let’s make your idea into real !
       </p>
