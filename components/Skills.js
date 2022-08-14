@@ -18,6 +18,7 @@ function Skills() {
         </div>
         <div className="skill">
           <Image src="/skills/ts.svg" width={80} height={80} alt="skill-img" />
+
           <p className="text-background">Typescript</p>
         </div>
         <div className="skill">

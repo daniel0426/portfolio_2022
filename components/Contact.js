@@ -137,7 +137,7 @@ function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline mx-auto uppercase tracking-wider bg-brightpurple  text-white  border-[1px] border-brightpurple py-2 px-4 text-sm sm:py-2 sm:px-8 focus:outline-none transition-all sm:text-lg font-light mt-4"
+                className="inline mx-auto rounded-sm sm:rounded-md uppercase tracking-wider bg-brightpurple  text-white  border-[1px] border-brightpurple py-2 px-6 text-sm sm:py-2 sm:px-8 focus:outline-none transition-all sm:text-lg font-light mt-4"
               >
                 {isSubmitting ? <Loader color="fill-white" /> : 'Shoot'}
               </button>
