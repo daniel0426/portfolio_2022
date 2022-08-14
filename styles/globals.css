@@ -15,6 +15,9 @@
 
 
 @layer base {
+  html {
+    @apply scroll-smooth
+  }
   body {
     @apply bg-background text-white font-nunito !scrollbar-thin  !scrollbar-track-transparent !scrollbar-thumb-purple scroll-smooth 
   }
@@ -97,9 +100,11 @@ input:focus label {
 }
 
 @media screen and (max-width: 768px){
+  
   body.is-nav-open .nav-open-btn{
     opacity :0
   }
+
   body.is-nav-open .nav {
     transition: all 0.75s cubic-bezier(0.86, 0, 0.07, 1);
     transform: translate3d(0, 0, 0);
@@ -113,13 +118,11 @@ input:focus label {
   }
   body.is-nav-open ul li {
     margin-bottom: 1rem;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #F6F5FF;
     transition: all 0.25s ease;
   }
-  body.is-nav-open ul li:hover {
-    color : #682ae9;
-  } 
+ 
   body.is-nav-open .theme-btn {
     display:none;
   }
@@ -133,7 +136,7 @@ input:focus label {
     right: 0;
     z-index: 9999;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 8rem 2.5rem 4rem;
     text-align: right;
     transform: translate3d(120%, 0, 0);

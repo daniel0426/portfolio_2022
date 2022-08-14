@@ -10,7 +10,7 @@ import { projects } from '../db/data';
 
 export default function Home({ projects }) {
   return (
-    <div>
+    <div className="scroll-smooth">
       <Head>
         <title>Daniel Chung</title>
         <link rel="icon" href="/favicon.ico" />
