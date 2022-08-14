@@ -13,12 +13,12 @@ const ProjectDetail = () => {
     <section className=" overflow-hidden min-h-screen ">
       <div className="container px-5 py-24 mx-auto h-full">
         <Link href="/#projects">
-          <BackspaceIcon className="w-7 h-7 mb-12 opacity-80 cursor-pointer hover:opacity-100 transition" />
+          <BackspaceIcon className="w-8 h-8 mb-12 text-brightpurple  opacity-80 cursor-pointer hover:opacity-100 transition" />
         </Link>
-        <h1 className="text-brightpurple text-6xl sm:text-7xl lg:text-9xl mb-12 sm:mb-20 uppercase font-machine">
+        <h1 className="text-brightpurple italic text-6xl sm:text-7xl lg:text-9xl mb-12 sm:mb-20 uppercase font-machine">
           {title}
         </h1>
-        <div className="lg:w-full mx-auto flex flex-wrap justify-between items-center">
+        <div className="lg:w-full mx-auto flex flex-wrap justify-between ">
           <div className="w-full lg:w-1/2 lg:pr-12">
             <img
               alt="ecommerce"
@@ -27,7 +27,7 @@ const ProjectDetail = () => {
               className="w-full! relative! object-contain rounded-md opacity-95"
             />
           </div>
-          <div className="lg:w-1/2 w-full lg:pl-12 lg:py-6 mt-6 lg:mt-0">
+          <div className="lg:w-1/2 w-full lg:pl-12  mt-6 lg:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
               BRAND NAME
             </h2>

@@ -27,8 +27,8 @@ function Projects({ projects }) {
               key={project.id}
               className="cursor-pointer"
             >
-              <div className="cursor-pointer mb-4 sm:mb-0 flex flex-col  group ">
-                <p className="text-6xl sm:text-8xl  lg:text-9xl text-purple font-machine   hover:italic hover:translate-x-3 transition-all">
+              <div className="cursor-pointer mb-4 sm:mb-0 flex flex-col group ">
+                <p className="text-6xl sm:text-8xl  lg:text-9xl text-purple  font-machine opacity-85 hover:opacity-100 hover:brightness-125  hover:italic hover:translate-x-3 transition-all">
                   {project.title}
                 </p>
                 <p className="opacity-70 text-sm sm:text-base font-light pl-0.5 sm:pl-2  group-hover:opacity-100 transition-all">
