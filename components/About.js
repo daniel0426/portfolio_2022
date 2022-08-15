@@ -39,7 +39,7 @@ function About() {
             src="/about-img.png"
             width={200}
             height={280}
-            className="object-contain"
+            className="object-contain "
             alt="about img"
           />
         </div>
