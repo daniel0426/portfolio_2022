@@ -3,9 +3,9 @@ import HeroAnimation from './HeroAnimation';
 
 function Hero() {
   return (
-    <section className="text-white font-montserrat h-[75vh] mt-12 sm:mt-0 md:h-[90vh] flex ">
+    <section className="text-white font-montserrat h-[80vh] mt-12 sm:mt-0 md:h-[90vh] flex ">
       <div className="container  md:mt-0  mx-auto flex py-24 md:flex-row flex-col items-center justify-center">
-        <div className="w-3/4 md:w-1/2 mx-auto flex flex-col md:items-start mb-12 md:mb-0  ">
+        <div className="w-3/4 md:w-1/2 mx-auto flex flex-col md:items-start mb-6 md:mb-0  ">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl lg:leading-tight mb-8 border-l-2 border-l-purple border-dashed pl-4 ">
             Hi ! My name is
             <br />
