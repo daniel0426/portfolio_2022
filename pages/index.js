@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
-import { projects } from '../db/data';
+import { getProjects } from '../lib/projects';
 
 export default function Home({ projects }) {
   return (
@@ -26,8 +26,9 @@ export default function Home({ projects }) {
   );
 }
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
+  const projects = await getProjects();
   return {
-    props: { projects },
+    props: projects,
   };
-};
+}

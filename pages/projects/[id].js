@@ -1,11 +1,27 @@
 import Link from 'next/link';
 import React from 'react';
-import { useRouter } from 'next/router';
 import { BackspaceIcon } from '@heroicons/react/outline';
+import { getProject, getProjects } from '../../lib/projects';
 
-const ProjectDetail = () => {
-  const router = useRouter();
-  const query = router.query;
+export async function getStaticPaths() {
+  const projects = await getProjects();
+
+  return {
+    paths: projects['projects'].map((project) => ({
+      params: { id: project.id.toString() },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params: { id } }) {
+  const project = await getProject(id);
+  return {
+    props: { project },
+  };
+}
+
+const ProjectDetail = ({ project }) => {
   const {
     title,
     img,
@@ -14,7 +30,7 @@ const ProjectDetail = () => {
     technologies,
     githubUrl,
     websiteUrl,
-  } = query;
+  } = project;
 
   return (
     <section className=" overflow-hidden min-h-screen ">

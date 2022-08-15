@@ -1,0 +1,101 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "apro go",
+      "description": "Social tool suggestion application",
+      "details": [
+        "Ongoing side project that suggest online collaborating tools to small teams / organizations based on members personality.",
+        "Collaborating with 9 team members from ideation to implement product.",
+        "Following agile process to implement each pages & functions.",
+        "Implement profile page & recommendation page.",
+        "Using storybook for testing components and pages."
+      ],
+      "technologies": [
+        "React",
+        "Typescript",
+        "Styled Components",
+        "Storybook",
+        "Netlify"
+      ],
+      "img": "/projects/aprogo.png",
+      "githubUrl": "https://github.com/team-ProD/FE-MAIN",
+      "websiteUrl": "https://apro-go.netlify.app"
+    },
+    {
+      "id": 2,
+      "title": "hipeak",
+      "description": "Hipeak creative website",
+      "details": [
+        "Hipeak Creative website collaborate with web designer.",
+        "Using Gatsby for fast static website.",
+        "Hoisting and deployed using AWS S3, Route53 and Cloudfront.",
+        "Implementing mail service using AWS SES, Ramda function."
+      ],
+      "technologies": ["Gatsby", "AWS"],
+      "img": "/projects/hipeak.png",
+      "githubUrl": null,
+      "websiteUrl": "https://hipeak.co.nz"
+    },
+    {
+      "id": 3,
+      "title": "caron",
+      "description": "caron automotive website",
+      "details": [
+        "Caron automotive website based in Tauranga.",
+        "Request from caron automotive manager, experiencing design to hoisting and deployment.",
+        "Using Gatsby for fast static website.",
+        "Hoisting and deployed using AWS S3, Route53 and Cloudfront."
+      ],
+      "technologies": ["Gatsby", "AWS"],
+      "img": "/projects/caron.png",
+      "githubUrl": "https://github.com/daniel0426/caron-automotive",
+      "websiteUrl": "caron.co.nz"
+    },
+    {
+      "id": 4,
+      "title": "netclix ",
+      "description": "Netflix redesign project",
+      "details": [
+        "Netflic redesign website that user can login, subscribe and see trailers.",
+        "Implement server side rendering for better user experience.",
+        "Implement login function using firebase authentication.",
+        "Implement payment system using firebase & stripe.",
+        "Managing data using Recoil."
+      ],
+      "technologies": ["Next.js", "Typescript", "Recoil", "Stripe", "Firebase"],
+      "img": "/projects/netclix.png",
+      "githubUrl": "https://github.com/daniel0426/netflix-clone",
+      "websiteUrl": "https://netclix.vercel.app"
+    },
+    {
+      "id": 5,
+      "title": "Noted",
+      "description": "Personal note app",
+      "details": [
+        "Simple note app that users can write notes about their daily life.",
+        "Managing data using redux / redux actions.",
+        "Using both redux saga / thunk to fetch weather data from Openweatherapi. "
+      ],
+      "technologies": ["React", "Redux (saga / thunk )", "Material UI"],
+      "img": "/projects/noted.png",
+      "githubUrl": "https://github.com/daniel0426/noteApp-redux-reduxThunk",
+      "websiteUrl": "https://noted-personal.netlify.app"
+    },
+    {
+      "id": 6,
+      "title": "Cryptok",
+      "description": "Cryptocurrency information application",
+      "details": [
+        "Cryptocurrency website that show cryptocurrencies and related news to users using coinranking and Bing new API.",
+        "Using redux to manage states from two other API.",
+        "Using Chart.js to show cryptocurrency states to the user.",
+        "Implement design using Ant design, but need to improve on responsive design"
+      ],
+      "technologies": ["React", "Redux", "Rapid API", "Ant Design"],
+      "img": "/projects/cryptoworld.png",
+      "githubUrl": "https://github.com/daniel0426/cryptoworld",
+      "websiteUrl": "https://cryptos-worlds.netlify.app/"
+    }
+  ]
+}
