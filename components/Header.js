@@ -40,7 +40,7 @@ function Header() {
         <Image
           src="/logo.png"
           width={110}
-          height={100}
+          height={80}
           alt="logo"
           className="obejct-contain cursor-pointer w-3/4 md:w-full "
         />
@@ -51,7 +51,7 @@ function Header() {
       />
       <nav className="nav transition-all md:text-lg">
         <XCircleIcon
-          className="nav-close-btn w-11 h-11 text-purple hover:text-white transition"
+          className="nav-close-btn w-12 h-12 text-purple hover:text-white transition"
           onClick={MobileMenuCloseHandler}
         />
         <ul className="space-x-4 ">
