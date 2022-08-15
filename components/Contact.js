@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
 import Loader from './Loader';
@@ -61,7 +61,7 @@ function Contact() {
       <div className="container md:px-5 py-24 mx-auto mb-24">
         <div className="flex flex-col text-left sm:text-center mx-auto w-4/5 md:w-full mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl  font-medium title-font mb-4 text-brightpurple">
-            Send me a message !
+            Send me a message!
           </h1>
           <p className="leading-relaxed text-[16px] md:text-xl font-light r">
             Got a question or proposal, or just want {''}

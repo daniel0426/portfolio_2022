@@ -30,24 +30,24 @@ const ProjectDetail = () => {
             <img
               alt="project"
               layout="fill"
-              src={img}
+              src={img && img}
               className="w-full! relative! object-contain rounded-md opacity-95"
             />
           </div>
           <div className="lg:w-2/5 w-full lg:pl-12 mt-6 lg:mt-0">
-            <h2 className="text-lg mb-4">{description}</h2>
+            <h2 className="text-lg mb-4">{description && description}</h2>
             <div className="mb-6">
               <p className="mb-3 text-lg">Details</p>
-              {details.map((detail, index) => (
+              {details?.map((detail, index) => (
                 <p key={index} className="mb-2 text-sm font-light ">
-                  {detail}
+                  {detail && detail}
                 </p>
               ))}
             </div>
             <div className="mb-6">
               <p className="mb-3 text-lg">Technologies</p>
               <div className="flex flex-wrap gap-y-4">
-                {technologies.map((technology, index) => (
+                {technologies?.map((technology, index) => (
                   <span
                     key={index}
                     className="bg-brightpurple mr-4  rounded-3xl py-2 px-3 text-[12px] uppercase"

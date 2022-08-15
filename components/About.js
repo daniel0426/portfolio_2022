@@ -21,7 +21,7 @@ function About() {
           <p>
             beyond front-end development, i eager to learn how to show data
             effectively to users and write backend logic to handle massive
-            traffic
+            traffic.
           </p>
         </div>
         <div className="w-4/5 md:w-1/2 flex flex-col justify-center mx-auto md:mx-0">
@@ -45,7 +45,7 @@ function About() {
         </div>
       </div>
       <Skills />
-      <h2 className="section-title">about /</h2>
+      <h2 className="section-title text-right">about /</h2>
     </section>
   );
 }

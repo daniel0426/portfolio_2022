@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-
+import Image from 'next/image';
 import {
   DocumentTextIcon,
-  MoonIcon,
-  SunIcon,
   MenuAlt3Icon,
   XCircleIcon,
 } from '@heroicons/react/outline';
-import Image from 'next/image';
 import { ImLinkedin, ImGithub } from 'react-icons/im';
-import { useCallback } from 'react';
 
 function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -32,9 +28,9 @@ function Header() {
 
   useEffect(() => {
     if (typeof window != 'undefined' && window.document && mobileNavOpen) {
-      document.body.classList.add('scroll');
+      document.body.style.overflow = 'hidden';
     } else if (typeof window != 'undefined' && mobileNavOpen === false) {
-      document.body.classList.remove('scroll');
+      document.body.style.overflow = 'unset';
     }
   }, [mobileNavOpen]);
 
@@ -75,7 +71,12 @@ function Header() {
             className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
             onClick={clickMobileMenuLink}
           >
-            <a href="" target="_blank" className="flex items-center">
+            <a
+              href="/CV-2022.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center"
+            >
               <span>CV</span>
               <DocumentTextIcon className="w-12 h-13 ml-0.5 md:ml-0.3 md:w-5 md:h-5 " />
             </a>

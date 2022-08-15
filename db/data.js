@@ -83,7 +83,7 @@ export const projects = [
   },
   {
     id: 6,
-    title: 'Cryptoworld',
+    title: 'Cryptok',
     description: 'Cryptocurrency information application',
     details: [
       'Cryptocurrency website that show cryptocurrencies and related news to users using coinranking and Bing new API.',
@@ -92,8 +92,8 @@ export const projects = [
       'Implement design using Ant design, but need to improve on responsive design',
     ],
     technologies: ['React', 'Redux', 'Rapid API', 'Ant Design'],
-    img: '/projects/noted.png',
-    githubUrl: 'https://github.com/daniel0426/noteApp-redux-reduxThunk',
-    websiteUrl: 'https://noted-personal.netlify.app',
+    img: '/projects/cryptoworld.png',
+    githubUrl: 'https://github.com/daniel0426/cryptoworld',
+    websiteUrl: 'https://cryptos-worlds.netlify.app/',
   },
 ];
