@@ -120,7 +120,7 @@ export const ProjectDetailVariants = {
       opacity: 1,
       transition: {
         duration: 0.6,
-        delay: 1,
+        delay: 1.2,
         ease: [0.6, -0.05, 0.01, 0.99],
       },
     },
