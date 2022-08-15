@@ -40,7 +40,7 @@ function Projects({ projects }) {
         </div>
       </div>
 
-      <h2 className="section-title">projects /</h2>
+      <h2 className="section-title text-right">projects /</h2>
     </section>
   );
 }
