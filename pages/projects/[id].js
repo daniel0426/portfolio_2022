@@ -58,9 +58,9 @@ const ProjectDetail = ({ project }) => {
               layout="fill"
               src={img && img}
               className="w-full! relative! object-contain rounded-md opacity-95"
-              initial={{ y: 80, opacity: 0 }}
+              initial={{ y: 60, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.55 }}
+              transition={{ delay: 0.55, duration: 0.3 }}
             />
           </div>
           <motion.div className="lg:w-2/5 w-full lg:pl-12 mt-6 lg:mt-0">
