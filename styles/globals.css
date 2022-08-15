@@ -1,16 +1,148 @@
-html,
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'MACHINE';
+  src: url("../assets/Font/MACHINE.otf");
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+}
+
+
+@layer base {
+  html {
+    @apply scroll-smooth
+  }
+  body {
+    @apply bg-background text-white font-nunito !scrollbar-thin  !scrollbar-track-transparent !scrollbar-thumb-purple scroll-smooth 
+  }
+
+  header {
+    @apply  bg-gradient-to-b fixed top-0 text-purple z-40 flex w-full h-[8rem] items-center justify-between px-8 md:px-16  py-2 transition-all lg:py-2 
+  }
+
+  footer {
+    @apply text-white px-2 sm:px-6 md:px-16 pb-6 sm:py-4 
+  }
+}
+
+@layer components {
+ .section-title {
+  @apply text-brightpurple before:content-['<'] before:mr-2 after:content-['>'] after:ml-2 text-4xl md:text-5xl lg:text-6xl my-12 md:my-24 sm:ml-0 px-5
+ }
+
+ .skill {
+  @apply flex flex-col items-center space-y-4 transition text-center font-light md:text-lg
+ }
+ 
+ .label {
+  @apply leading-8 text-sm font-light group-focus-within:text-brightpurple group-focus-within:brightness-125 
+ }
+
+ .input {
+   @apply w-full text-sm sm:text-[16px] bg-transparent font-light border border-l-0 border-r-0 border-t-0  border-b-white  focus:border-b-brightpurple focus:brightness-125  outline-none  pb-1 leading-6 transition-colors duration-200 ease-in-out  placeholder-white placeholder:font-light focus:placeholder-opacity-0 
+ }
+
+ .warningMessage {
+    @apply text-[12px] sm:text-sm font-light text-error
+ }
+}
+
+@layer utilities {
+  .bg-gradient {
+    background-image : linear-gradient(180deg, #0D0F17 7rem,rgba(14,18,18,0) 100%)
+  }
+
+  
+
+}
+
+/* nav styling */
+.nav {
+  display : flex;
+  align-items : center
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-close-btn {
+  position: absolute;
+  top: 2.5rem;
+  right: 1.5rem;
+  display: none;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: none;
+  border: 0;
+  cursor:pointer;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+
+/* chrome autocomplete background fix */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #0D0F17 inset !important;
+  -webkit-text-fill-color: #F6F5FF !important;
 }
 
-* {
-  box-sizing: border-box;
+input:focus label {
+  color: #6919FF
+}
+
+@media screen and (max-width: 768px){
+  
+  body.is-nav-open .nav-open-btn{
+    opacity :0
+  }
+
+  body.is-nav-open .nav {
+    transition: all 0.75s cubic-bezier(0.86, 0, 0.07, 1);
+    transform: translate3d(0, 0, 0);
+    background-color :#0D0F17;
+    opacity: 100;
+  }
+
+  body.is-nav-open ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  body.is-nav-open ul li {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #F6F5FF;
+    transition: all 0.25s ease;
+  }
+ 
+  body.is-nav-open .theme-btn {
+    display:none;
+  }
+
+  .nav {
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    opacity:0;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 8rem 2.5rem 4rem;
+    text-align: right;
+    transform: translate3d(120%, 0, 0);
+  }
+  
+  .nav-close-btn {
+    display:flex
+  }
 }
