@@ -48,11 +48,11 @@ export const HeaderVariants = {
 export const HeroVariants = {
   content: {
     initial: {
-      x: -200,
+      y: 100,
       opacity: 0,
     },
     animate: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         ease: [0.76, 0, 0.24, 1],
@@ -66,11 +66,11 @@ export const HeroVariants = {
   },
   image: {
     initial: {
-      x: 200,
+      y: 200,
       opacity: 0,
     },
     animate: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         ease: [0.76, 0, 0.24, 1],

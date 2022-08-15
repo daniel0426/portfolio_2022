@@ -6,7 +6,7 @@ import { HeroVariants } from '../motionVariants';
 
 function Hero() {
   return (
-    <section className="text-white relative font-montserrat h-[80vh] mt-12 sm:mt-0 md:h-[90vh] flex ">
+    <section className="text-white relative font-montserrat h-[80vh] mt-28 sm:mt-6 md:h-[90vh] flex ">
       <div className="container  md:mt-0  mx-auto flex py-24 md:flex-row flex-col items-center justify-center">
         <motion.div
           className="w-3/4 md:w-1/2 mx-auto flex flex-col md:items-start mb-6 md:mb-0  "
