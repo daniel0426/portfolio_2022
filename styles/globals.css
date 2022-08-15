@@ -58,6 +58,11 @@
     background-image : linear-gradient(180deg, #0D0F17 6rem,rgba(14,18,18,0) 100%)
   }
 
+  .hero-bg {
+    background: rgb(13,15,23);
+background: linear-gradient(145deg, rgba(13,15,23,1) 0%, rgba(10,14,28,1) 46%, rgba(10,17,38,1) 73%, rgba(12,21,55,1) 88%, rgba(12,26,82,1) 100%);
+  }
+
   
 
 }

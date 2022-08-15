@@ -9,7 +9,7 @@ import { getProjects } from '../lib/projects';
 
 export default function Home({ projects }) {
   return (
-    <div className="scroll-smooth">
+    <div className="scroll-smooth hero-bg">
       <Head>
         <title>Daniel Chung</title>
         <link rel="icon" href="/favicon.ico" />
