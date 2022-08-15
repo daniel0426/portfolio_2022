@@ -2,6 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import { BackspaceIcon } from '@heroicons/react/outline';
 import { getProject, getProjects } from '../../lib/projects';
+import { motion } from 'framer-motion';
+import { ProjectDetailVariants } from '../../motionVariants';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -33,75 +35,111 @@ const ProjectDetail = ({ project }) => {
   } = project;
 
   return (
-    <section className="overflow-hidden min-h-screen ">
+    <motion.section
+      className="overflow-hidden min-h-screen "
+      initial="initial"
+      animate="animate"
+      exit={{ opacity: 0 }}
+    >
       <div className="container px-5 py-16 mx-auto h-full">
         <Link href="/#projects">
           <BackspaceIcon className="w-9 h-9 mb-12 text-brightpurple  opacity-80 cursor-pointer hover:opacity-100 transition" />
         </Link>
-        <h1 className="text-brightpurple italic text-6xl sm:text-7xl lg:text-9xl mb-12 sm:mb-20 uppercase font-machine">
+        <motion.h1
+          className="text-brightpurple italic text-6xl sm:text-7xl lg:text-9xl mb-12 sm:mb-20 uppercase font-machine"
+          variants={ProjectDetailVariants.title}
+        >
           {title}
-        </h1>
+        </motion.h1>
         <div className="lg:w-full mx-auto flex flex-wrap justify-between ">
           <div className="w-full lg:w-3/5 lg:pr-12">
-            <img
+            <motion.img
               alt="project"
               layout="fill"
               src={img && img}
               className="w-full! relative! object-contain rounded-md opacity-95"
+              initial={{ y: 80, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.55 }}
             />
           </div>
-          <div className="lg:w-2/5 w-full lg:pl-12 mt-6 lg:mt-0">
-            <h2 className="text-lg mb-4">{description}</h2>
-            <div className="mb-6">
-              <p className="mb-3 text-lg">Details</p>
-              {details.map((detail, index) => (
-                <p key={index} className="mb-2 text-[15px] font-light ">
-                  {detail}
-                </p>
-              ))}
-            </div>
-            <div className="mb-6">
-              <p className="mb-3 text-lg">Technologies</p>
-              <div className="flex flex-wrap gap-y-4">
-                {technologies.map((technology, index) => (
-                  <span
+          <motion.div className="lg:w-2/5 w-full lg:pl-12 mt-6 lg:mt-0">
+            <motion.div variants={ProjectDetailVariants.stagger}>
+              <motion.h2
+                className="text-lg mb-4"
+                variants={ProjectDetailVariants.fadeInUp}
+              >
+                {description}
+              </motion.h2>
+              <div className="mb-6">
+                <motion.p
+                  className="mb-3 text-lg"
+                  variants={ProjectDetailVariants.fadeInUp}
+                >
+                  Details
+                </motion.p>
+                {details.map((detail, index) => (
+                  <motion.p
                     key={index}
-                    className="bg-brightpurple mr-4  rounded-3xl py-2 px-3 text-[12px] uppercase"
+                    className="mb-2 text-[15px] font-light"
+                    variants={ProjectDetailVariants.fadeInUp}
                   >
-                    {technology}
-                  </span>
+                    {detail}
+                  </motion.p>
                 ))}
               </div>
-            </div>
-            <div className="mt-8 flex justify-center sm:justify-start gap-x-4 sm:gap-x-8 ">
-              {githubUrl && (
-                <a
-                  href={githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="websiteUrl"
-                  className="py-2 px-4 sm:border sm:border-1 text-background bg-white sm:border-brightpurple   sm:bg-background sm:text-brightpurple sm:hover:bg-brightpurple sm:hover:text-white transition-all"
+              <div className="mb-6">
+                <motion.p
+                  className="mb-3 text-lg"
+                  variants={ProjectDetailVariants.fadeInUp}
                 >
-                  View Code
-                </a>
-              )}
+                  Technologies
+                </motion.p>
+                <div className="flex flex-wrap gap-y-4">
+                  {technologies.map((technology, index) => (
+                    <motion.span
+                      key={index}
+                      className="bg-brightpurple mr-4  rounded-3xl py-2 px-3 text-[12px] uppercase"
+                      variants={ProjectDetailVariants.fadeInUp}
+                    >
+                      {technology}
+                    </motion.span>
+                  ))}
+                </div>
+              </div>
+              <motion.div
+                className="mt-8 flex justify-center sm:justify-start gap-x-4 sm:gap-x-8 "
+                variants={ProjectDetailVariants.fadeInUp}
+              >
+                {githubUrl && (
+                  <a
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="websiteUrl"
+                    className="py-2 px-4 sm:border sm:border-1 text-background bg-white sm:border-brightpurple   sm:bg-background sm:text-brightpurple sm:hover:bg-brightpurple sm:hover:text-white transition-all"
+                  >
+                    View Code
+                  </a>
+                )}
 
-              {websiteUrl && (
-                <a
-                  href={websiteUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="website Url"
-                  className="py-2 px-4 sm:border sm:border-1 text-background bg-white sm:border-brightpurple   sm:bg-background sm:text-brightpurple sm:hover:bg-brightpurple sm:hover:text-white transition-all"
-                >
-                  View Site
-                </a>
-              )}
-            </div>
-          </div>
+                {websiteUrl && (
+                  <a
+                    href={websiteUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="website Url"
+                    className="py-2 px-4 sm:border sm:border-1 text-background bg-white sm:border-brightpurple   sm:bg-background sm:text-brightpurple sm:hover:bg-brightpurple sm:hover:text-white transition-all"
+                  >
+                    View Site
+                  </a>
+                )}
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

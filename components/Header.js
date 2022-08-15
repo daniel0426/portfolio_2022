@@ -7,7 +7,8 @@ import {
   XCircleIcon,
 } from '@heroicons/react/outline';
 import { ImLinkedin, ImGithub } from 'react-icons/im';
-
+import { motion, AnimatePresence } from 'framer-motion';
+import { HeaderVariants } from '../motionVariants';
 function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
@@ -35,7 +36,13 @@ function Header() {
   }, [mobileNavOpen]);
 
   return (
-    <header className="bg-gradient">
+    <motion.header
+      className="bg-gradient"
+      initial={'initial'}
+      animate={'animate'}
+      exit={'exit'}
+      variants={HeaderVariants.header}
+    >
       <Link href="/">
         <Image
           src="/logo.png"
@@ -55,21 +62,24 @@ function Header() {
           onClick={MobileMenuCloseHandler}
         />
         <ul className="space-x-4 ">
-          <li
+          <motion.li
             className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
             onClick={clickMobileMenuLink}
+            variants={HeaderVariants.navItem}
           >
             <Link href="/#projects">PROJECTS</Link>
-          </li>
-          <li
+          </motion.li>
+          <motion.li
             className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
             onClick={clickMobileMenuLink}
+            variants={HeaderVariants.navItem}
           >
             <Link href="/#contact">CONTACT</Link>
-          </li>
-          <li
+          </motion.li>
+          <motion.li
             className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
             onClick={clickMobileMenuLink}
+            variants={HeaderVariants.navItem}
           >
             <a
               href="/CV-2022.pdf"
@@ -80,8 +90,8 @@ function Header() {
               <span>CV</span>
               <DocumentTextIcon className="w-12 h-13 ml-0.5 md:ml-0.3 md:w-5 md:h-5 " />
             </a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={HeaderVariants.navItem}>
             <a
               href="https://www.linkedin.com/in/daniel-chung-0426/"
               target="_blank"
@@ -91,8 +101,8 @@ function Header() {
             >
               <ImLinkedin className="w-11 h-11 md:w-5 md:h-5  text-purple  transition-all hover:brightness-110 " />
             </a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={HeaderVariants.navItem}>
             <a
               href="https://github.com/daniel0426"
               target="_blank"
@@ -102,10 +112,10 @@ function Header() {
             >
               <ImGithub className="w-11 h-11 md:w-6 md:h-6 text-purple  transition-all hover:brightness-110" />
             </a>
-          </li>
+          </motion.li>
         </ul>
       </nav>
-    </header>
+    </motion.header>
   );
 }
 

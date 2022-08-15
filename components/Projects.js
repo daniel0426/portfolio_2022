@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ProjectVariants } from '../motionVariants';
 
 function Projects({ projects }) {
   return (
@@ -20,24 +22,30 @@ function Projects({ projects }) {
             <div className="w-0.5 flex-1 h-full bg-brightpurple"></div>
           </div> */}
         </div>
-        <div className="sm:mx-auto sm:w-1/2 xl:w-2/5 ">
+        <motion.div
+          className="sm:mx-auto sm:w-1/2 xl:w-2/5 "
+          variants={ProjectVariants.stagger}
+        >
           {projects.map((project) => (
             <Link
               href={`/projects/${project.id}`}
               key={project.id}
               className="cursor-pointer"
             >
-              <div className="cursor-pointer mb-4 sm:mb-0 flex flex-col group ">
+              <motion.div
+                className="cursor-pointer mb-4 sm:mb-0 flex flex-col group"
+                variants={ProjectVariants.fadeInUp}
+              >
                 <p className="text-6xl sm:text-8xl  lg:text-9xl text-purple  font-machine opacity-85 hover:opacity-100 hover:brightness-125  hover:italic hover:translate-x-3 transition-all">
                   {project.title}
                 </p>
                 <p className="opacity-70 text-sm sm:text-[16px] font-light pl-0.5 sm:pl-2  group-hover:opacity-100 transition-all">
                   {project.description}
                 </p>
-              </div>
+              </motion.div>
             </Link>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       <h2 className="section-title text-right">projects /</h2>
