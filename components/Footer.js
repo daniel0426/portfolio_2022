@@ -27,7 +27,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             title="linkedin"
-            className="ml-3"
+            className="ml-5"
           >
             <ImLinkedin className="w-6 h-6 text-mint hover:brightness-125 " />
           </a>
@@ -36,7 +36,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             title="github"
-            className="ml-3"
+            className="ml-5"
           >
             <ImGithub className="w-6 h-6 text-mint hover:brightness-125" />
           </a>
@@ -45,7 +45,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             title="mail"
-            className="ml-3"
+            className="ml-5"
           >
             <HiOutlineMail className="w-8 h-8 text-mint hover:brightness-125" />
           </a>
