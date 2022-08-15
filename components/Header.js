@@ -61,58 +61,62 @@ function Header() {
           className="nav-close-btn w-12 h-12 text-purple hover:text-white transition"
           onClick={MobileMenuCloseHandler}
         />
-        <ul className="space-x-4 ">
-          <motion.li
-            className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
-            onClick={clickMobileMenuLink}
-            variants={HeaderVariants.navItem}
-          >
-            <Link href="/#projects">PROJECTS</Link>
-          </motion.li>
-          <motion.li
-            className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
-            onClick={clickMobileMenuLink}
-            variants={HeaderVariants.navItem}
-          >
-            <Link href="/#contact">CONTACT</Link>
-          </motion.li>
-          <motion.li
-            className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
-            onClick={clickMobileMenuLink}
-            variants={HeaderVariants.navItem}
-          >
-            <a
-              href="/CV-2022.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center"
-            >
-              <span>CV</span>
-              <DocumentTextIcon className="w-12 h-13 ml-0.5 md:ml-0.3 md:w-5 md:h-5 " />
-            </a>
-          </motion.li>
-          <motion.li variants={HeaderVariants.navItem}>
-            <a
-              href="https://www.linkedin.com/in/daniel-chung-0426/"
-              target="_blank"
-              rel="noreferrer"
-              title="linkedin"
+        <ul>
+          <motion.ul className="space-x-4 " variants={HeaderVariants.stagger}>
+            <motion.li
+              className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
               onClick={clickMobileMenuLink}
+              variants={HeaderVariants.navItem}
             >
-              <ImLinkedin className="w-11 h-11 md:w-5 md:h-5  text-purple  transition-all hover:brightness-110 " />
-            </a>
-          </motion.li>
-          <motion.li variants={HeaderVariants.navItem}>
-            <a
-              href="https://github.com/daniel0426"
-              target="_blank"
-              rel="noreferrer"
-              title="github"
+              <Link href="/#projects">PROJECTS</Link>
+            </motion.li>
+            <motion.li
+              className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
               onClick={clickMobileMenuLink}
+              variants={HeaderVariants.navItem}
             >
-              <ImGithub className="w-11 h-11 md:w-6 md:h-6 text-purple  transition-all hover:brightness-110" />
-            </a>
-          </motion.li>
+              <Link href="/#contact">CONTACT</Link>
+            </motion.li>
+            <motion.li
+              className="md:hover:underline decoration-wavy transition-all hover:brightness-110"
+              onClick={clickMobileMenuLink}
+              variants={HeaderVariants.navItem}
+            >
+              <motion.a
+                href="/CV-2022.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center"
+                variants={HeaderVariants.navItem}
+              >
+                <span>CV</span>
+                <DocumentTextIcon className="w-12 h-13 ml-0.5 md:ml-0.3 md:w-5 md:h-5 " />
+              </motion.a>
+            </motion.li>
+            <motion.li variants={HeaderVariants.navItem}>
+              <motion.a
+                href="https://www.linkedin.com/in/daniel-chung-0426/"
+                target="_blank"
+                rel="noreferrer"
+                title="linkedin"
+                onClick={clickMobileMenuLink}
+                variants={HeaderVariants.navItem}
+              >
+                <ImLinkedin className="w-11 h-11 md:w-5 md:h-5  text-purple  transition-all hover:brightness-110 " />
+              </motion.a>
+            </motion.li>
+            <motion.li variants={HeaderVariants.navItem}>
+              <a
+                href="https://github.com/daniel0426"
+                target="_blank"
+                rel="noreferrer"
+                title="github"
+                onClick={clickMobileMenuLink}
+              >
+                <ImGithub className="w-11 h-11 md:w-6 md:h-6 text-purple  transition-all hover:brightness-110" />
+              </a>
+            </motion.li>
+          </motion.ul>
         </ul>
       </nav>
     </motion.header>
