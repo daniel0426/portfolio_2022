@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "id": 1,
+      "id": 0,
       "title": "apro go",
       "description": "Social tool suggestion application",
       "details": [
@@ -23,7 +23,7 @@
       "websiteUrl": "https://apro-go.netlify.app"
     },
     {
-      "id": 2,
+      "id": 1,
       "title": "hipeak",
       "description": "Hipeak creative website",
       "details": [
@@ -38,7 +38,7 @@
       "websiteUrl": "https://hipeak.co.nz"
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "caron",
       "description": "caron automotive website",
       "details": [
@@ -53,14 +53,14 @@
       "websiteUrl": "caron.co.nz"
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "netclix ",
       "description": "Netflix redesign project",
       "details": [
         "Netflic redesign website that user can login, subscribe and see trailers.",
         "Implement server side rendering for better user experience.",
         "Implement login function using firebase authentication.",
-        "Implement payment system using firebase & stripe.",
+        "Implement payment system using Firebase & Stripe.",
         "Managing data using Recoil."
       ],
       "technologies": ["Next.js", "Typescript", "Recoil", "Stripe", "Firebase"],
@@ -69,7 +69,7 @@
       "websiteUrl": "https://netclix.vercel.app"
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Noted",
       "description": "Personal note app",
       "details": [
@@ -83,11 +83,11 @@
       "websiteUrl": "https://noted-personal.netlify.app"
     },
     {
-      "id": 6,
+      "id": 5,
       "title": "Cryptok",
       "description": "Cryptocurrency information application",
       "details": [
-        "Cryptocurrency website that show cryptocurrencies and related news to users using coinranking and Bing new API.",
+        "Cryptocurrency website that show cryptocurrencies and related news to users using coinranking and Bing news API.",
         "Using redux to manage states from two other API.",
         "Using Chart.js to show cryptocurrency states to the user.",
         "Implement design using Ant design, but need to improve on responsive design"
@@ -95,7 +95,7 @@
       "technologies": ["React", "Redux", "Rapid API", "Ant Design"],
       "img": "/projects/cryptoworld.png",
       "githubUrl": "https://github.com/daniel0426/cryptoworld",
-      "websiteUrl": "https://cryptos-worlds.netlify.app/"
+      "websiteUrl": "https://cryptos-worlds.netlify.app"
     }
   ]
 }

@@ -23,7 +23,7 @@ function Projects({ projects }) {
         <div className="mx-auto sm:w-1/2 ">
           {projects.map((project) => (
             <Link
-              href={{ pathname: `/projects/${project.id}` }}
+              href={`/projects/${project.id}`}
               key={project.id}
               className="cursor-pointer"
             >
