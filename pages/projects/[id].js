@@ -33,8 +33,8 @@ const ProjectDetail = ({ project }) => {
   } = project;
 
   return (
-    <section className=" overflow-hidden min-h-screen ">
-      <div className="container px-5 py-24 mx-auto h-full">
+    <section className="overflow-hidden min-h-screen ">
+      <div className="container px-5 py-16 mx-auto h-full">
         <Link href="/#projects">
           <BackspaceIcon className="w-9 h-9 mb-12 text-brightpurple  opacity-80 cursor-pointer hover:opacity-100 transition" />
         </Link>
@@ -55,7 +55,7 @@ const ProjectDetail = ({ project }) => {
             <div className="mb-6">
               <p className="mb-3 text-lg">Details</p>
               {details.map((detail, index) => (
-                <p key={index} className="mb-2 text-sm font-light ">
+                <p key={index} className="mb-2 text-[15px] font-light ">
                   {detail}
                 </p>
               ))}
